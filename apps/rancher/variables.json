@@ -1,0 +1,13 @@
+{
+  "name": "rancher",
+  "trademark": "Rancher",
+  "release": false,
+  "fork_url": "",
+  "version": "",
+  "requirements": {
+    "cpu": "1",
+    "memory": "2",
+    "disk": "1",
+    "url": "https://rancher.com/quick-start"
+  }
+}

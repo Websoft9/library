@@ -1,0 +1,13 @@
+{
+  "name": "jenkins",
+  "trademark": "Jenkins",
+  "release": true,
+  "fork_url": "https://github.com/jenkinsci/docker.git",
+  "version": "2.418,latest",
+  "requirements": {
+    "cpu": "1",
+    "memory": "2",
+    "disk": "1",
+    "url": "https://www.jenkins.io/doc/book/installing/docker/"
+  }
+}

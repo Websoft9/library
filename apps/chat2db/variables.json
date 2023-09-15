@@ -1,0 +1,13 @@
+{
+  "name": "chat2db",
+  "trademark": "chat2",
+  "release": true,
+  "fork_url": "https://github.com/chat2db/Chat2DB",
+  "version": "2.0.6",
+  "requirements": {
+    "cpu": "1",
+    "memory": "1",
+    "disk": "1",
+    "url": "https://github.com/onlyoffice/docker#recommended-system-requirements"
+  }
+}

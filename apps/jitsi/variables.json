@@ -1,0 +1,13 @@
+{
+  "name": "jitsi",
+  "trademark": "Jitsi",
+  "release": false,
+  "fork_url": "https://github.com/jitsi/docker-jitsi-meet",
+  "version": "latest",
+  "requirements": {
+    "cpu": "2",
+    "memory": "4",
+    "disk": "1",
+    "url": "https://jitsi.github.io/handbook/docs/devops-guide/devops-guide-docker/"
+  }
+}

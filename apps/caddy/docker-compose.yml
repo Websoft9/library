@@ -1,0 +1,28 @@
+# this file from docker-compose.workspace, delete mail-server
+# default MySQL root password is 123456
+
+
+version: '3.8'
+services:
+  caddy:
+    image: caddy:$APP_VERSION
+    container_name: $APP_NAME
+    env_file:
+      - .env
+    restart: unless-stopped
+    ports:
+      - "$APP_HTTP_PORT:80"
+      - "$APP_HTTPS_PORT:443"
+    volumes:
+      - ./src/Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+    
+networks:
+  default:
+    name: ${APP_NETWORK}
+    external: true
+    
+volumes:
+  caddy_data:
+  caddy_config:

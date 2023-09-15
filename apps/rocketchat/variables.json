@@ -1,0 +1,13 @@
+{
+  "name": "rocketchat",
+  "trademark": "RocketChat",
+  "release": true,
+  "fork_url": "https://github.com/RocketChat/Docker.Official.Image",
+  "version": "4.8",
+  "requirements": {
+    "cpu": "1",
+    "memory": "2",
+    "disk": "1",
+    "url": "https://docs.rocket.chat/installing-and-updating/docker-containers"
+  }
+}

@@ -1,0 +1,31 @@
+# dockerhub: https://hub.docker.com/_/haproxy/
+
+version: '3.8'
+
+services:
+  haproxy:
+    image: haproxy:${APP_VERSION}
+    container_name: ${APP_NAME}
+    ports:
+      - ${APP_HTTP_PORT}:1080
+      - ${APP_STATS_PORT}:80
+    volumes:    
+      - ./src/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+    restart: unless-stopped
+    user: root
+    env_file: .env
+    entrypoint: bash -c "cat /my_cmd > /myentrypoint.sh && chmod +x /myentrypoint.sh && /myentrypoint.sh"
+    configs:
+      - source: my_cmd
+
+networks:
+  default:
+    name: ${APP_NETWORK}
+    external: true
+
+volumes:
+  haproxy:
+
+configs:
+  my_cmd:
+    file: ./entrypoint.sh

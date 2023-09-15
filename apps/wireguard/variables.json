@@ -1,0 +1,13 @@
+{
+  "name": "wireguard",
+  "trademark": "Wireguard",
+  "release": false,
+  "fork_url": "https://github.com/linuxserver/docker-wireguard",
+  "version": "",
+  "requirements": {
+    "cpu": "1",
+    "memory": "2",
+    "disk": "1",
+    "url": "https://github.com/linuxserver/docker-wireguard"
+  }
+}

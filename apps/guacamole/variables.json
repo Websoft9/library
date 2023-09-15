@@ -1,0 +1,13 @@
+{
+  "name": "guacamole",
+  "trademark": "Guacamole",
+  "release": false,
+  "fork_url": "https://github.com/boschkundendienst/guacamole-docker-compose",
+  "version": "",
+  "requirements": {
+    "cpu": "2",
+    "memory": "4",
+    "disk": "1",
+    "url": "https://guacamole.incubator.apache.org/doc/gug/introduction.html"
+  }
+}

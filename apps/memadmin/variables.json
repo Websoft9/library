@@ -1,0 +1,13 @@
+{
+  "name": "memadmin",
+  "trademark": "MemAdmin",
+  "release": false,
+  "fork_url": "https://github.com/hatamiarash7/Memcached-Admin",
+  "version": "",
+  "requirements": {
+    "cpu": "2",
+    "memory": "4",
+    "disk": "1",
+    "url": "https://github.com/junstor/memadmin"
+  }
+}

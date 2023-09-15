@@ -1,0 +1,124 @@
+x-java-defaults: &java_defaults
+  entrypoint: bash -c "cat /opt/config/java/service.sh > /cmd.sh && chmod +x /cmd.sh && /cmd.sh"
+  working_dir: /data/apps
+      
+services:
+
+  java19:
+    container_name: java19
+    restart: unless-stopped
+    build:
+      context: src
+      dockerfile: Dockerfile.java
+      args:
+        - JDK_VERSION=19
+    volumes: 
+      - java19:/data/apps
+      - ./config/java:/opt/config/java      
+    <<: *java_defaults
+
+  java18:
+    container_name: java18
+    restart: unless-stopped
+    build:
+      context: src
+      dockerfile: Dockerfile.java
+      args:
+        - JDK_VERSION=18
+    volumes: 
+      - java18:/data/apps
+      - ./config/java:/opt/config/java
+    <<: *java_defaults
+
+  java17:
+    container_name: java17
+    restart: always
+    build:
+      context: src
+      dockerfile: Dockerfile.java
+      args:
+        - JDK_VERSION=17
+    volumes: 
+      - java17:/data/apps
+      - ./config/java:/opt/config/java
+    <<: *java_defaults
+
+  java15:
+    restart: unless-stopped
+    container_name: java15
+    build:
+      context: src
+      dockerfile: Dockerfile.java
+      args:
+        - JDK_VERSION=15
+    volumes: 
+      - java15:/data/apps
+      - ./config/java:/opt/config/java
+    <<: *java_defaults
+
+  java14:
+    restart: unless-stopped
+    container_name: java14
+    build:
+      context: src
+      dockerfile: Dockerfile.java
+      args:
+        - JDK_VERSION=14
+    volumes: 
+      - java14:/data/apps
+      - ./config/java:/opt/config/java
+    <<: *java_defaults
+
+  java13:
+    restart: unless-stopped
+    container_name: java13
+    build:
+      context: src
+      dockerfile: Dockerfile.java
+      args:
+        - JDK_VERSION=13
+    volumes: 
+      - java13:/data/apps
+      - ./config/java:/opt/config/java
+    <<: *java_defaults
+
+  java11:
+    restart: unless-stopped
+    container_name: java11
+    build:
+      context: src
+      dockerfile: Dockerfile.java
+      args:
+        - JDK_VERSION=11
+    volumes: 
+      - java11:/data/apps
+      - ./config/java:/opt/config/java
+    <<: *java_defaults
+
+  java8:
+    restart: unless-stopped
+    container_name: java8
+    build:
+      context: src
+      dockerfile: Dockerfile.java
+      args:
+        - JDK_VERSION=8
+    volumes: 
+      - java8:/data/apps
+      - ./config/java:/opt/config/java
+    <<: *java_defaults
+
+volumes:
+  java19:
+  java18:
+  java17:
+  java15:
+  java14:
+  java13:
+  java11:
+  java8:
+
+networks:
+  default:
+    name: ${APP_NETWORK}
+    external: true

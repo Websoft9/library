@@ -1,0 +1,52 @@
+# image: https://github.com/bitnami/bitnami-docker-mediawiki
+
+version: '3.8'
+
+services:
+  mediawiki:
+    image: $APP_REPO:$APP_VERSION
+    container_name: $APP_NAME
+    ports:
+      - ${APP_HTTP_PORT}:8080
+    env_file:
+      - .env
+    environment:
+      - MEDIAWIKI_DATABASE_HOST=$APP_NAME-db
+      - MEDIAWIKI_DATABASE_PORT_NUMBER=$APP_DB_MYSQL_PORT
+      - MEDIAWIKI_DATABASE_USER=$APP_DB_MYSQL_USER
+      - MEDIAWIKI_DATABASE_NAME=$APP_DB_MYSQL_NAME
+      - MEDIAWIKI_DATABASE_PASSWORD=$APP_DB_MYSQL_PASSWORD
+      - MEDIAWIKI_USERNAME=$APP_USER
+      - MEDIAWIKI_PASSWORD=$APP_PASSWORD
+      - MEDIAWIKI_EMAIL=$APP_EMAIL
+      - MEDIAWIKI_HOST=$APP_URL
+      - MEDIAWIKI_WIKI_NAME=$APP_SITENAME
+    volumes:
+      - mediawiki:/bitnami/mediawiki
+    depends_on:
+      - db
+    restart: unless-stopped
+
+  db:
+    image: mysql:$APP_DB_MYSQL_VERSION
+    container_name: $APP_NAME-db
+    restart: unless-stopped
+    #ports:
+    # - $APP_DB_MYSQL_PORT:3306
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - mysql:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: $APP_DB_MYSQL_NAME
+      MYSQL_USER: $APP_DB_MYSQL_USER
+      MYSQL_PASSWORD: $APP_DB_MYSQL_PASSWORD
+      MYSQL_ROOT_PASSWORD: $APP_DB_MYSQL_PASSWORD
+
+networks:
+  default:
+    name: ${APP_NETWORK}
+    external: true
+
+volumes:
+  mediawiki:
+  mysql:

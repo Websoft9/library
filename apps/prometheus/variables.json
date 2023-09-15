@@ -1,0 +1,13 @@
+{
+  "name": "prometheus",
+  "trademark": "Prometheus",
+  "release": false,
+  "fork_url": "https://hub.docker.com/r/prom/prometheus/",
+  "version": "latest",
+  "requirements": {
+    "cpu": "1",
+    "memory": "1",
+    "disk": "1",
+    "url": "https://hub.docker.com/r/prom/prometheus/"
+  }
+}

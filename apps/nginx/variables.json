@@ -1,0 +1,13 @@
+{
+  "name": "nginx",
+  "trademark": "Nginx",
+  "release": false,
+  "fork_url": "https://github.com/nginxinc/docker-nginx",
+  "version": "",
+  "requirements": {
+    "cpu": "2",
+    "memory": "4",
+    "disk": "1",
+    "url": "https://github.com/nginx/docker#recommended-system-requirements"
+  }
+}

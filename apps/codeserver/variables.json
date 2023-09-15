@@ -1,0 +1,13 @@
+{
+  "name": "codeserver",
+  "trademark": "CodeServer",
+  "release": true,
+  "fork_url": "https://github.com/linuxserver/docker-code-server",
+  "version": "4.16.1,latest",
+  "requirements": {
+    "cpu": "1",
+    "memory": "1",
+    "disk": "1",
+    "url": "https://github.com/cdr/code-server/blob/main/docs/guide.md#requirements"
+  }
+}

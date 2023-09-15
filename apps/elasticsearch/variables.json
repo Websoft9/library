@@ -1,0 +1,13 @@
+{
+  "name": "elasticsearch",
+  "trademark": "Elasticsearch",
+  "release": true,
+  "fork_url": "https://github.com/elastic/elasticsearch",
+  "version": "8.6.0",
+  "requirements": {
+    "cpu": "2",
+    "memory": "4",
+    "disk": "1",
+    "url": "https://github.com/elastic/elasticsearch"
+  }
+}

@@ -1,0 +1,20 @@
+# image: https://github.com/users/arimal199/packages/container/package/alpine-webmin
+# docs: https://github.com/arimal199/alpine-webmin
+
+version: '3.8'
+
+services:
+  webmin:
+    image: websoft9dev/webmin:${APP_VERSION}
+    container_name: ${APP_NAME}
+    env_file: .env
+    environment:
+      - WEBMIN_PASSWORD=${APP_PASSWORD}
+    ports:
+      - '10000:10000'
+    restart: unless-stopped
+
+networks:
+  default:
+    name: ${APP_NETWORK}
+    external: true

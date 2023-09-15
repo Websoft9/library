@@ -1,0 +1,57 @@
+# image: https://hub.docker.com/r/directus/directus
+# docs: https://docs.directus.io/self-hosted/docker-guide.html
+
+version: '3.8'
+
+services:
+  directus:
+    image: directus/directus:$APP_VERSION
+    container_name: $APP_NAME
+    env_file: .env
+    ports:
+      - $APP_HTTP_PORT:8055
+    volumes:
+      - directus_uploads:/directus/uploads
+      - directus_extensions:/directus/extensions
+      - directus_sqlite:/directus/database
+    environment:
+      KEY: '255d861b-5ea1-5996-9aa3-922530ec40b1'
+      SECRET: '6116487b-cda1-52c2-b5b5-c8022c45e263'
+      DB_CLIENT: 'pg'
+      DB_HOST: $APP_NAME-db
+      DB_PORT: '5432'
+      DB_DATABASE: $APP_DB_POSTGRESQL_NAME
+      DB_USER: $APP_DB_POSTGRESQL_USER
+      DB_PASSWORD: $APP_DB_POSTGRESQL_PASSWORD
+
+      # Make sure to set this in production
+      # (see https://docs.directus.io/reference/environment-variables/#general)
+      # PUBLIC_URL: 'https://directus.example.com'
+    restart: unless-stopped
+
+  db:
+    image: postgres:$APP_DB_POSTGRESQL_VERSION
+    container_name: $APP_NAME-db
+    restart: unless-stopped
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: $APP_DB_POSTGRESQL_NAME
+      POSTGRES_USER: $APP_DB_POSTGRESQL_USER
+      POSTGRES_PASSWORD: $APP_DB_POSTGRESQL_PASSWORD
+
+  redis:
+    image: redis:$APP_DB_REDIS_VERSION
+    container_name: $APP_NAME-redis
+    restart: unless-stopped
+
+networks:
+  default:
+    name: ${APP_NETWORK}
+    external: true
+
+volumes:
+  postgres:
+  directus_uploads:
+  directus_extensions:
+  directus_sqlite:

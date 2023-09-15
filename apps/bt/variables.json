@@ -1,0 +1,13 @@
+{
+  "name": "bt",
+  "trademark": "BT",
+  "release": false,
+  "fork_url": "https://github.com/aaPanel/BaoTa",
+  "version": "7.9.7",
+  "requirements": {
+    "cpu": "1",
+    "memory": "1",
+    "disk": "1",
+    "url": "https://github.com/aaPanel/BaoTa"
+  }
+}

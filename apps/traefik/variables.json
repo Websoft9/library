@@ -1,0 +1,13 @@
+{
+  "name": "traefik",
+  "trademark": "Traefik",
+  "release": true,
+  "fork_url": "",
+  "version": "latest",
+  "requirements": {
+    "cpu": "1",
+    "memory": "1",
+    "disk": "1",
+    "url": "https://hub.docker.com/_/traefik"
+  }
+}

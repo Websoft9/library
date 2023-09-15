@@ -1,0 +1,25 @@
+# image: https://hub.docker.com/r/jenkins/jenkins
+
+version: '3.8'
+
+services:
+  jenkins:
+    container_name: ${APP_NAME}
+    image: jenkins/jenkins:${APP_VERSION}
+    env_file: .env
+    user: root
+    restart: unless-stopped
+    ports:
+      - "$APP_JENKINS_SLAVE_AGENT_PORT:50000"
+      - "$APP_HTTP_PORT:8080"
+    volumes:
+      - jenkins:/var/jenkins_home
+
+networks:
+  default:
+    name: ${APP_NETWORK}
+    external: true
+
+volumes:
+  jenkins:
+    driver: local

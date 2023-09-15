@@ -1,0 +1,19 @@
+# image: https://hub.docker.com/r/websoft9dev/ansible
+
+version: '3.8'
+
+services:
+  ansible:
+    image: $APP_REPO:$APP_VERSION
+    container_name: $APP_NAME
+    restart: unless-stopped
+    volumes: 
+      - ansible:/ansible/project
+
+networks:
+  default:
+    name: ${APP_NETWORK}
+    external: true
+
+volumes:
+  ansible:

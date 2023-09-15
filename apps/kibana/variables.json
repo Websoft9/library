@@ -1,0 +1,13 @@
+{
+  "name": "kibana",
+  "trademark": "Kibana",
+  "release": false,
+  "fork_url": "",
+  "version": "",
+  "requirements": {
+    "cpu": "2",
+    "memory": "4",
+    "disk": "1",
+    "url": "https://github.com/kibana/docker#recommended-system-requirements"
+  }
+}

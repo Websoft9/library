@@ -1,0 +1,13 @@
+{
+  "name": "huginn",
+  "trademark": "huginn",
+  "release": false,
+  "fork_url": "https://github.com/huginn/huginn",
+  "version": "latest",
+  "requirements": {
+    "cpu": "1",
+    "memory": "1",
+    "disk": "1",
+    "url": "https://github.com/huginn/huginn"
+  }
+}

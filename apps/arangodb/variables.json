@@ -1,0 +1,13 @@
+{
+  "name": "arangodb",
+  "trademark": "ArangoDB",
+  "release": true,
+  "fork_url": "https://github.com/arangodb/arangodb",
+  "version": "latest",
+  "requirements": {
+    "cpu": "1",
+    "memory": "1",
+    "disk": "1",
+    "url": "https://github.com/arangodb/arangodb"
+  }
+}

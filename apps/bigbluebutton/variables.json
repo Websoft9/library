@@ -1,0 +1,13 @@
+{
+  "name": "bigbluebutton",
+  "trademark": "BigBlueButton",
+  "release": false,
+  "fork_url": "https://github.com/bigbluebutton/docker",
+  "version": "latest",
+  "requirements": {
+    "cpu": "2",
+    "memory": "4",
+    "disk": "1",
+    "url": "https://github.com/bigbluebutton/docker#recommended-system-requirements"
+  }
+}

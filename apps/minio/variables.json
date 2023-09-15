@@ -1,0 +1,13 @@
+{
+  "name": "minio",
+  "trademark": "Minio",
+  "release": true,
+  "fork_url": "",
+  "version": "RELEASE.2023-05-18T00-05-36Z,latest",
+  "requirements": {
+    "cpu": "1",
+    "memory": "2",
+    "disk": "1",
+    "url": "https://hub.docker.com/r/minio/minio"
+  }
+}

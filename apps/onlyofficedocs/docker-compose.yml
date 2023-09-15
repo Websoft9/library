@@ -1,0 +1,40 @@
+# JWT_ENABLED must set to flase, otherwise error 'The documents security token is not correct. Please contact your system administrator.
+# image: https://hub.docker.com/r/onlyoffice/documentserver
+# docs: https://github.com/ONLYOFFICE/Docker-CommunityServer
+# license.lic should storaged to document_data
+
+version: '3.8'
+services:     
+  onlyofficedocs:
+    container_name: ${APP_NAME}
+    image: onlyoffice/${APP_REPO}:${APP_VERSION}
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+     - '${APP_HTTP_PORT}:80'
+    expose:
+      - '80'
+      - '443'
+    volumes:
+       - document_data:/var/www/onlyoffice/Data
+       - document_log:/var/log/onlyoffice
+       - document_db:/var/lib/postgresql
+       - document_cache:/var/lib/onlyoffice
+       - document_fonts:/usr/share/fonts/truetype/custom
+       - document_forgotten:/var/lib/onlyoffice/documentserver/App_Data/cache/files/forgotten
+
+networks:
+  default:
+    name: ${APP_NETWORK}
+    external: true
+
+volumes:
+  document_data:
+  document_log:
+  document_db:
+  document_cache:
+  document_fonts:
+  document_forgotten:

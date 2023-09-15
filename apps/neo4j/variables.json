@@ -1,0 +1,13 @@
+{
+  "name": "neo4j",
+  "trademark": "Neo4j",
+  "release": true,
+  "fork_url": "https://github.com/neo4j/docker-neo4j",
+  "version": "5.7,4.4,latest",
+  "requirements": {
+    "cpu": "1",
+    "memory": "2",
+    "disk": "1",
+    "url": "https://neo4j.com/docs/operations-manual/current/installation/requirements/"
+  }
+}

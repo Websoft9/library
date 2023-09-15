@@ -1,0 +1,13 @@
+{
+  "name": "theia",
+  "trademark": "Theia",
+  "release": true,
+  "fork_url": "https://registry.hub.docker.com/r/theiaide/theia",
+  "version": "latest",
+  "requirements": {
+    "cpu": "1",
+    "memory": "1",
+    "disk": "1",
+    "url": "https://registry.hub.docker.com/r/theiaide/theia"
+  }
+}
