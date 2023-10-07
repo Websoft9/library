@@ -3,7 +3,7 @@
   "trademark": "Neo4j",
   "release": true,
   "fork_url": "https://github.com/neo4j/docker-neo4j",
-  "version": "5.7,4.4,latest",
+  "version": "5.12,5.7,4.4,latest",
   "requirements": {
     "cpu": "1",
     "memory": "2",

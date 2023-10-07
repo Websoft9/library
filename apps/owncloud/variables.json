@@ -3,7 +3,7 @@
   "trademark": "Owncloud",
   "release": true,
   "fork_url": "https://github.com/owncloud-docker/server",
-  "version": "10.11,latest",
+  "version": "10.13,latest",
   "requirements": {
     "cpu": "1",
     "memory": "1",
