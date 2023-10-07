@@ -3,7 +3,7 @@
   "trademark": "Gitlab",
   "release": true,
   "fork_url": "https://github.com/gitlabhq/omnibus-gitlab",
-  "version": "16.2.3-ce.0,latest",
+  "version": "16.4.1-ce.0,latest",
   "requirements": {
     "cpu": "2",
     "memory": "8",
