@@ -3,7 +3,7 @@
   "trademark": "elastic Stack",
   "release": true,
   "fork_url": "https://github.com/deviantony/docker-elk.git",
-  "version": "8.5.0",
+  "version": "8.10.2",
   "requirements": {
     "cpu": "2",
     "memory": "4",
