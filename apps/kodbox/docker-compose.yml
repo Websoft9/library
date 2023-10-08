@@ -29,14 +29,12 @@ services:
       - "MYSQL_DATABASE=$APP_DB_MARIADB_DATABASE"
       - "MYSQL_USER=$APP_DB_MARIADB_USER"
       - "MYSQL_PASSWORD=$APP_DB_MARIADB_PASSWORD"
-      - "SESSION_HOST=redis"
-      - "PUID=1050"
-      - "PGID=1051"
+      - "CACHE_HOST=redis"
     env_file: .env
     restart: always
 
   redis:
-    image: redis:alpine
+    image: redis:alpine3.17
     container_name: $APP_NAME-redis
     environment:
       - "TZ=Asia/Shanghai"
