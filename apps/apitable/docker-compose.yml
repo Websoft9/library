@@ -80,8 +80,6 @@ services:
       - "${ENV_FILE:-.env}"
     environment:
       - TZ=${TIMEZONE}
-    networks:
-      - apitable
     depends_on:
       mysql:
         condition: service_healthy
