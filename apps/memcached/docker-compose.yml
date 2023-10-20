@@ -15,7 +15,7 @@ services:
      - '-c ${APP_MEMORY}'
 
   memadmin:
-    image: hatamiarash7/memcached-admin:latest
+    image: hatamiarash7/memcached-admin:master
     container_name: $APP_NAME-panel
     restart: unless-stopped
     ports:
