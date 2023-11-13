@@ -22,10 +22,10 @@ services:
     image: mysql:8.0
     container_name: ${APP_NAME}-db 
     environment:
-      - MARIADB_ROOT_PASSWORD=${POWER_PASSWORD}
-      - MARIADB_DATABASE=${APP_NAME}
-      - MARIADB_USER=${APP_NAME}
-      - MARIADB_PASSWORD=${POWER_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=${POWER_PASSWORD}
+      - MYSQL_DATABASE=${APP_NAME}
+      - MYSQL_USER=${APP_NAME}
+      - MYSQL_PASSWORD=${POWER_PASSWORD}
     volumes:
       - mysql_data:/var/lib/mysql
     restart: unless-stopped
