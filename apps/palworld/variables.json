@@ -1,0 +1,21 @@
+{
+  "name": "palworld",
+  "trademark": "Palworld",
+  "release": true,
+  "fork_url": "https://hub.docker.com/r/pasharp/pal_server",
+  "edition": [
+    {
+      "dist": "community",
+      "version": [
+        "240125",
+        "latest"
+      ]
+    }
+  ],
+  "requirements": {
+    "cpu": "4",
+    "memory": "16",
+    "disk": "20",
+    "url": "https://hub.docker.com/r/pasharp/pal_server"
+  }
+}
